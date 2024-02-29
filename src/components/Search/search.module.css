@@ -1,0 +1,15 @@
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: gainsboro;
+  border-radius: 15px;
+}
+
+.input {
+  border: none;
+  background-color: gainsboro;
+  margin-left: 10px;
+  outline: 0;
+}
+

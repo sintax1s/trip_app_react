@@ -1,0 +1,13 @@
+.sortButton {
+  display: flex;
+  align-items: center;
+  width: 140px;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: gainsboro;
+  cursor: pointer;
+}

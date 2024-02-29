@@ -1,0 +1,23 @@
+.list {
+  display: flex;
+  gap: 60px;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.list::-webkit-scrollbar {
+  height: 7px;
+}
+
+.list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+.list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

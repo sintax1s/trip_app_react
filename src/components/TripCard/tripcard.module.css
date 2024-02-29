@@ -1,0 +1,36 @@
+.card {
+  width: 200px;
+  height: 270px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.cardImage {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.cardInfo {
+  padding: 15px;
+  
+  margin: 0;
+}
+
+.activeCard {
+  border: 1px solid rgb(0, 153, 255);
+}
+
+.notActiveCard {
+  border: 1px solid gainsboro;
+}
+
+.cardName {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.cardDate {
+  color: gray;
+  font-size: 12px;
+}
