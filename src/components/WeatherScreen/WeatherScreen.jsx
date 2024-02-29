@@ -35,15 +35,16 @@ const WeatherScreen = ({selectedTrip}) => {
   }, [selectedTrip.city])
 
   const timerArr = [
-    { name: 'DAYS', value: timeRemaining.days },
-    { name: 'HOURS', value: timeRemaining.hours },
-    { name: 'MINUTES', value: timeRemaining.minutes },
-    { name: 'SECONDS', value: timeRemaining.seconds },
+    { name: 'DAYS', value: timeRemaining.days || 0 },
+    { name: 'HOURS', value: timeRemaining.hours || 0 },
+    { name: 'MINUTES', value: timeRemaining.minutes || 0 },
+    { name: 'SECONDS', value: timeRemaining.seconds || 0 },
   ];
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.weatherInfo}>
+      {weather.temp && (
+        <div className={styles.weatherInfo}>
         <p>{weather.dayOfWeek}</p>
         <div className={styles.weatherBriefly}>
           <img 
@@ -56,7 +57,9 @@ const WeatherScreen = ({selectedTrip}) => {
         </div>
         <p>{selectedTrip.city}</p>
       </div>
-      <div className={styles.timer}>
+      )}
+
+        <div className={styles.timer}>
         {timerArr.map(({name, value }) => (
           <div className={styles.timerField} key={name}>
             <p className={styles.timeValue}>{value}</p>
@@ -64,6 +67,7 @@ const WeatherScreen = ({selectedTrip}) => {
           </div>
         ))}
       </div>
+        
     </div>
   );
 };
